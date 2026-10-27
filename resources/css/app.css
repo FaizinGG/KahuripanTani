@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+}
+
+html.dark input:not([type='checkbox']):not([type='radio']),
+html.dark select,
+html.dark textarea {
+  border-color: #475569;
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+.app-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+}
+
+.app-table thead {
+  background-color: #f8fafc;
+}
+
+.app-table th,
+.app-table td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+}
+
+.app-table th {
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.receivables-table th:nth-child(2),
+.receivables-table th:nth-child(3) {
+  text-align: right;
+}
+
+.receivables-table th:nth-child(5) {
+  text-align: center;
+}
+
+.app-table tbody tr {
+  transition: background-color 150ms ease;
+}
+
+.app-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.app-table td .rounded-full {
+  border-radius: 0.5rem;
+}
+
+.dark .app-table thead {
+  background-color: #0f172a;
+}
+
+.dark .app-table th {
+  color: #cbd5e1;
+}
+
+.dark .app-table tbody {
+  background-color: #020617;
+}
+
+.dark .app-table tbody tr:hover {
+  background-color: #0f172a;
+}
+
+.dark .app-table th,
+.dark .app-table td {
+  border-color: #1e293b;
+}
